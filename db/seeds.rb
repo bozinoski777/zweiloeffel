@@ -8,4 +8,5 @@ obj.each do |external|
     Ingredient.create!(name: internal["name"], price: internal["price"], weight: internal["weight"], protein: internal["protein"])
   end
 end
+puts "Database seeded"
 
