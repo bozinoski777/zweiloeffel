@@ -6,8 +6,7 @@ obj = JSON.parse(s)
 
 obj.each do |external|
   external[1].each do |internal|
-    p internal["name"]
+    Ingredient.create!(name: internal["name"], price: internal["price"], weight: internal["weight"], protein: internal["protein"])
   end
 end
 
-# Ingredient.create(name: "Hampf Samen", price: 20, weight: 12, protein: 20)
