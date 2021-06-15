@@ -16,15 +16,12 @@
   <div class="row">
     <div class="col-md-8">
       <div class="row">
-        <div class="col-md-3">
-            <%= render 'shared/card_ingredient' %>
-        </div>
-        <div class="col-md-3">
-        </div>
-        <div class="col-md-3">
-        </div>
-        <div class="col-md-3">
-        </div>
+          <% @ingredients.each do |ingredient| %>
+            <div class="col-md-3">
+                <%= render 'shared/card_ingredient', ingredient_within: ingredient %>
+            </div>
+          <% end %>
+
       </div>
     </div>
     <div class="col-md-4">

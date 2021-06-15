@@ -1,0 +1,52 @@
+{
+  "ingredients": [
+    {
+      "name": "Lainsamen",
+      "price": 23,
+      "weight": 21,
+      "protein": 11
+    },
+    {
+      "name": "Hampfsamen",
+      "price": 27,
+      "weight": 22,
+      "protein": 17
+    },
+    {
+      "name": "Kürbiskerne",
+      "price": 12,
+      "weight": 17,
+      "protein": 13
+    },
+    {
+      "name": "Chiasamen",
+      "price": 14,
+      "weight": 16,
+      "protein": 15
+    },
+    {
+      "name": "Flohsamen",
+      "price": 15,
+      "weight": 15,
+      "protein": 16
+    },
+    {
+      "name": "Nelken",
+      "price": 71,
+      "weight": 13,
+      "protein": 19
+    },
+    {
+      "name": "Sesam",
+      "price": 18,
+      "weight": 71,
+      "protein": 17
+    },
+    {
+      "name": "Sonnenblumenkerne",
+      "price": 22,
+      "weight": 1,
+      "protein": 11
+    }
+  ]
+}
