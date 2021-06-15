@@ -7,5 +7,6 @@ class PagesController < ApplicationController
   end
 
   def home
+    @ingredients = Ingredient.all
   end
 end
