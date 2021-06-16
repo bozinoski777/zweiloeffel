@@ -8,5 +8,6 @@ class PagesController < ApplicationController
 
   def home
     @ingredients = Ingredient.all
+    @order = Order.new
   end
 end
