@@ -15,8 +15,8 @@ user.email = 'test@example.com'
 user.password = 'prilep'
 user.save!
 
-3.times do |_|
-  Dose.create!(ingredient_id: rand(6), amount: rand(10), user_id: 1)
-end
+# 3.times do |_|
+#   Dose.create!(ingredient_id: rand(6), amount: rand(10), user_id: 1)
+# end
 
 puts "Database seeded"
