@@ -4,49 +4,57 @@
       "name": "Lainsamen",
       "price": 23,
       "weight": 21,
-      "protein": 11
+      "protein": 11,
+      "img": "https://res.cloudinary.com/dj9iphc8u/image/upload/v1623852430/SmoothieJar/U8d0e376bf1814c81823a6e7bd6cb9cbe3_yuznfi.jpg"
     },
     {
       "name": "Hampfsamen",
       "price": 27,
       "weight": 22,
-      "protein": 17
+      "protein": 17,
+      "img": "https://res.cloudinary.com/dj9iphc8u/image/upload/v1607509947/SmoothieJar/Org_H_qf7kdl.jpg"
     },
     {
       "name": "Kürbiskerne",
       "price": 12,
       "weight": 17,
-      "protein": 13
+      "protein": 13,
+      "img": "https://res.cloudinary.com/dj9iphc8u/image/upload/v1607507349/SmoothieJar/Org_P_x9rwrj.jpg"
     },
     {
       "name": "Chiasamen",
       "price": 14,
       "weight": 16,
-      "protein": 15
+      "protein": 15,
+      "img": "https://res.cloudinary.com/dj9iphc8u/image/upload/v1623853819/SmoothieJar/chia-seed-500x500_gjqo68.jpg"
     },
     {
       "name": "Flohsamen",
       "price": 15,
       "weight": 15,
-      "protein": 16
+      "protein": 16,
+      "img": "https://res.cloudinary.com/dj9iphc8u/image/upload/v1607507348/SmoothieJar/Org_Floh_ronshw.jpg"
     },
     {
       "name": "Nelken",
       "price": 71,
       "weight": 13,
-      "protein": 19
+      "protein": 19,
+      "img": "https://res.cloudinary.com/dj9iphc8u/image/upload/v1607507350/SmoothieJar/Org_N_ejcdac.jpg"
     },
     {
       "name": "Sesam",
       "price": 18,
       "weight": 71,
-      "protein": 17
+      "protein": 17,
+      "img": "https://res.cloudinary.com/dj9iphc8u/image/upload/v1623852536/SmoothieJar/Sesame-Seeds-Health-Benefits-Tips-and-Recipes_k48yne.jpg"
     },
     {
       "name": "Sonnenblumenkerne",
       "price": 22,
       "weight": 1,
-      "protein": 11
+      "protein": 11,
+      "img": "https://res.cloudinary.com/dj9iphc8u/image/upload/v1623852587/SmoothieJar/UPA-0652-2_afoktm.jpg"
     }
   ]
 }
