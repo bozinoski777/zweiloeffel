@@ -1,5 +1,9 @@
 <div class="jar">
-<%= order_within.ingredient.each do |ingredient| %>
-  <%= ingredient.name %>
-<% end %>
+  <ul>
+  <% dose_within.each do |dose| %>
+  <li>
+    <%= dose.ingredient.name %>
+  </li>
+  <% end %>
+  </ul>
 </div>

@@ -8,6 +8,6 @@ class PagesController < ApplicationController
 
   def home
     @ingredients = Ingredient.all
-    @order = Order.new
+    @doses = Dose.all
   end
 end
