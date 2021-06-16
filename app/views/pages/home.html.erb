@@ -26,6 +26,7 @@
     </div>
     <div class="col-md-4 p-3">
       <%= render 'shared/jar', dose_within: @doses %>
+      <%= button_to "delete", delete_all_doses_path, method: "delete" %>
     </div>
   </div>
   <div class="row">
