@@ -5,13 +5,13 @@
     <div class="col-md-4">
       <div class="row">
         <div class="col-md-4">
-          <h4>Preis: <%= @summary_price %>€</h4>
+          <p>Preis: <%= @summary_price %>€</p>
         </div>
         <div class="col-md-4">
-          <h4>Gewicht: <%= @summary_weight %> Gramm</h4>
+          <p>Gewicht: <%= @summary_weight %>g</p>
         </div>
         <div class="col-md-4">
-          <h4>Kaufen</h4>
+          <p>Kaufen</p>
         </div>
       </div>
     </div>
@@ -34,7 +34,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-2">
+    <div class="col-md-2 text-center">
         <canvas id="myChart"></canvas>
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
       <script>
@@ -61,6 +61,8 @@
           type: 'pie',
           data: data,
           options: {
+            animation: false,
+
             responsive: true,
             plugins: {
               legend: {
@@ -79,6 +81,7 @@
           config
         );
       </script>
+      <p><%= @summary_protein %> Gramm </p>
     </div>
     <div class="col-md-2">
     </div>
