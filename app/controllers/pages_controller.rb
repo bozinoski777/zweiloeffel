@@ -22,12 +22,15 @@ class PagesController < ApplicationController
     doses = Dose.all
     summary_price = 0
     summary_weight = 0
+    summary_protein = 0
     doses.each do |dose|
       summary_price += dose.ingredient.price
       summary_weight += dose.ingredient.weight
+      summary_protein += dose.ingredient.protein
     end
     @summary_price = summary_price
     @summary_weight = summary_weight
+    @summary_protein = summary_protein
   end
 
   def delete_all_doses
