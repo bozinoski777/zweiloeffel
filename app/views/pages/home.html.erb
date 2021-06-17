@@ -48,7 +48,7 @@
           datasets: [
             {
               label: 'Dataset 1',
-              data: [<%= @summary_protein %>, <%= 80 - @summary_protein  %>],
+              data: [<%= @summary_protein %>, <%= ((@summary_protein) <= 80) ?  (80 - @summary_protein) : 0 %>],
               backgroundColor: Object.values([
                                               '#4dc9f6',
                                               '#f67019'
