@@ -1,4 +1,4 @@
-<%= link_to new_dose_path(ingredient: ingredient_within.id, amount: 10), method: :post  do %>
+<%= link_to new_dose_path(ingredient: ingredient_within.id, amount: 10), method: :post, remote:  true  do %>
   <div class="card-trip">
     <img src=<%= ingredient_within.img %> />
     <div class="card-trip-infos">
