@@ -29,7 +29,7 @@
     </div>
     <div class="col-md-4 p-3">
       <%= render 'shared/jar', dose_within: @doses %>
-      <%= button_to "delete", delete_all_doses_path, method: "delete" %>
+      <%= button_to "delete", delete_all_doses_path, method: "delete", remote:  true %>
 
     </div>
   </div>
@@ -40,10 +40,10 @@
       <script>
         // === include 'setup' then 'config' above ===
 
-        const DATA_COUNT = 1;
-        const NUMBER_CFG = {count: DATA_COUNT, min: 0, max: 100};
+        var DATA_COUNT = 1;
+        var NUMBER_CFG = {count: DATA_COUNT, min: 0, max: 100};
 
-        const data = {
+        var data = {
           // labels: ['Red', 'Orange'],
           datasets: [
             {
@@ -57,7 +57,7 @@
           ]
         };
 
-        const config = {
+        var config = {
           type: 'pie',
           data: data,
           options: {
