@@ -1,5 +1,5 @@
 <%= link_to new_dose_path(ingredient: ingredient_within.id, amount: 10), method: :post  do %>
-  <div class="card-trip">
+  <div id="chosenDose" class="card-trip">
     <img src=<%= ingredient_within.img %> />
     <div class="card-trip-infos">
       <div>
