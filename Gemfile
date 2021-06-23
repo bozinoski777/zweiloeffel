@@ -27,6 +27,7 @@ gem 'font-awesome-sass', '~> 5.6.1'
 gem 'simple_form'
 gem 'pg'
 gem 'chart-js-rails'
+gem 'turbolinks_render'
 
 
 # Use Active Storage variant
