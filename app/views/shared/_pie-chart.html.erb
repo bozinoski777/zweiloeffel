@@ -12,7 +12,8 @@
     datasets: [
       {
         label: 'Dataset 1',
-        data: [<%= summary_protein_within %>,  ((<%= summary_protein_within %>) <= 80) ?  (80 - <%= summary_protein_within %>) : 0],
+        data: [80, 0],
+        // data: [<%= summary_protein_within %>,  ((<%= summary_protein_within %>) <= 80) ?  (80 - <%= summary_protein_within %>) : 0],
         // data: [50, 40],
         backgroundColor: Object.values([
                                         '#4dc9f6',
@@ -46,13 +47,13 @@
     document.getElementById('myChart'),
     config
   );
-  myChart.update();
+  // myChart.update();
 
 
-//   function addData(){
+  // function addData(){
 
-//     myChart.data.datasets[0].data[0] += <%   %>
-//     myChart.data.datasets[0].data[1] -= 30
+    myChart.data.datasets[0].data[0] += (80 - document.getElementById("price").innerHTML)
+    myChart.data.datasets[0].data[1] -= (80 + document.getElementById("price").innerHTML)
     myChart.update();
 //   }
 // setTimeout(addData, 2000)
