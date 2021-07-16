@@ -1,4 +1,4 @@
-<%= link_to new_dose_path(ingredient: ingredient_within.id, amount: 10), method: :post, remote:  true  do %>
+<!-- <%#= link_to new_dose_path(ingredient: ingredient_within.id, amount: 10), method: :post, remote:  true  do %> -->
   <div class="card-trip">
     <img src=<%= ingredient_within.img %> />
     <div class="card-trip-infos">
@@ -9,4 +9,15 @@
       <h2 class="card-trip-pricing"><%= ingredient_within.price %>€</h2>
     </div>
   </div>
-<% end %>
+
+  <script>
+    document.getElementById("<%= ingredient_within.name %>").addEventListener("click", increaseOrder);
+    function increaseOrder() {
+      // Increase price
+      price += <%= ingredient_within.price %>
+      document.getElementById("price").innerHTML = price;
+
+
+    }
+  </script>
+<%# end %>
