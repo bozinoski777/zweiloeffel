@@ -39,6 +39,8 @@
       <p><%= @summary_protein %> Gramm </p>
     </div>
     <div class="col-md-2">
+      <p>JS added</p>
+      <p id="target"></p>
     </div>
     <div class="col-md-2">
     </div>
@@ -52,7 +54,10 @@
 </div>
 
 <script>
-  document.getElementById("myBtn").addEventListener("click", displayDate);
+  document.getElementById("Lainsamen").addEventListener("click", increaseOrder);
+  function increaseOrder() {
+    document.getElementById("target").innerHTML = "I WANT THIS TEXT TO STAY";
+  }
 </script>
 
 
