@@ -20,7 +20,7 @@
     <div class="col-md-8">
       <div class="row">
           <% @ingredients.each do |ingredient| %>
-            <div class="col-md-3 p-3">
+            <div class="col-md-3 p-3" id= <%= ingredient.name %>>
                 <%= render 'shared/card_ingredient', ingredient_within: ingredient %>
             </div>
           <% end %>
@@ -51,7 +51,9 @@
   </div>
 </div>
 
-
+<script>
+  document.getElementById("myBtn").addEventListener("click", displayDate);
+</script>
 
 
 
