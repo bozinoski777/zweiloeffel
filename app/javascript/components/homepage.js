@@ -1,7 +1,7 @@
-let price = 0;
-let weight = 0;
-let protein = 0;
-const initialData = () => {
+let initialData = () => {
+  let price = 0;
+  let weight = 0;
+  let protein = 0;
   document.querySelectorAll('.selectionCard').forEach(item => {
     item.addEventListener('click', event => {
       // Fetch ingredient data from DOM
@@ -9,6 +9,7 @@ const initialData = () => {
       let ingredientPrice = parseInt(event.path[1].dataset.price);
       let ingredientWeight = parseInt(event.path[1].dataset.weight);
       let ingredientProtein = parseInt(event.path[1].dataset.protein);
+      let ingredientIMG = event.path[1].dataset.img;
 
       // Increase price
       price += ingredientPrice
@@ -19,7 +20,13 @@ const initialData = () => {
       // Increase protein
       protein += ingredientProtein
       document.getElementById("finalProtein").innerHTML = protein;
+
+      //Jar
+      let contentImg = document.getElementById("jar-img-1");
+      contentImg.src = ingredientIMG
+      contentImg.style.height = `${weight}%`
+
     })
   })
 }
-export { initialData, protein };
+export { initialData };
