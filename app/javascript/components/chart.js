@@ -47,7 +47,6 @@
   // update protein value at every click in area
   palette.addEventListener('click', event => {
     totalProtein = parseInt(document.getElementById("finalProtein").innerHTML);
-    console.log(totalProtein)
   // Update chart
   function addData(totalProtein){
     if (totalProtein < 100) {

@@ -22,6 +22,16 @@ let initialData = () => {
       document.getElementById("finalProtein").innerHTML = protein;
 
       //Jar
+      let allContent = [...Array(8).keys()];
+      allContent.forEach(number => {
+        if (document.getElementById(`jar-img-${number}`).src === "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==") {
+          console.log(document.getElementById(`jar-img-${number}`).src)
+        } else {
+          console.log("empty?");
+        }
+      });
+
+
       let contentImg = document.getElementById("jar-img-1");
       contentImg.src = ingredientIMG
       contentImg.style.height = `${weight}%`
