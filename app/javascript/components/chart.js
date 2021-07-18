@@ -1,4 +1,6 @@
   // === include 'setup' then 'config' above ===
+  const proteinChart = () => {
+  let totalProtein = 0;
   var DATA_COUNT = 1;
   var NUMBER_CFG = {count: DATA_COUNT, min: 0, max: 100};
 
@@ -7,9 +9,7 @@
     datasets: [
       {
         label: 'Dataset 1',
-        data: [80, 0],
-        // data: [<%= summary_protein_within %>,  ((<%= summary_protein_within %>) <= 80) ?  (80 - <%= summary_protein_within %>) : 0],
-        // data: [50, 40],
+        data: [0, 100],
         backgroundColor: Object.values([
                                         '#4dc9f6',
                                         '#f67019'
@@ -42,13 +42,19 @@
     document.getElementById('myChart'),
     config
   );
-  // myChart.update();
+  // Add element to refresh protein value by
+  const palette = document.getElementById('ingredientSelection');
+  // update protein value at every click in area
+  palette.addEventListener('click', event => {
+    totalProtein = parseInt(document.getElementById("finalProtein").innerHTML);
+    console.log(totalProtein)
 
-
-  // function addData(){
-// console.log(protein)
-    // myChart.data.datasets[0].data[0] += (80 - document.getElementById("protein").innerHTML)
-    // myChart.data.datasets[0].data[1] -= (80 + document.getElementById("protein").innerHTML)
-    // myChart.update();
-//   }
-// setTimeout(addData, 2000)
+  function addData(totalProtein){
+    myChart.data.datasets[0].data[0] += (100 - totalProtein)
+    myChart.data.datasets[0].data[1] -= (100 + totalProtein)
+    myChart.update();
+  }
+  addData(totalProtein);
+  })
+}
+export { proteinChart };

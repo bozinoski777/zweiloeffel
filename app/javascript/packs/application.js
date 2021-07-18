@@ -17,8 +17,9 @@ require("channels")
 // const imagePath = (name) => images(name, true)
 
 import { initialData } from '../components/homepage';
-import {  } from '../components/chart';
-
+import { proteinChart } from '../components/chart';
 document.addEventListener('turbolinks:load', () => {
   initialData();
+  proteinChart();
+
 });

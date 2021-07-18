@@ -1,9 +1,7 @@
+let price = 0;
+let weight = 0;
+let protein = 0;
 const initialData = () => {
-  let price = 0;
-  let weight = 0;
-  let protein = 0;
-
-
   document.querySelectorAll('.selectionCard').forEach(item => {
     item.addEventListener('click', event => {
       // Fetch ingredient data from DOM
@@ -21,8 +19,7 @@ const initialData = () => {
       // Increase protein
       protein += ingredientProtein
       document.getElementById("finalProtein").innerHTML = protein;
-
     })
   })
 }
-export { initialData };
+export { initialData, protein };
