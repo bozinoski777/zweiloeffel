@@ -21,7 +21,7 @@ let initialData = () => {
       protein += ingredientProtein
       document.getElementById("finalProtein").innerHTML = protein;
 
-      //Jar
+      //Jar  This is where I left off. I dont know how to iterate over the coices to differentiate between alreadz selected or novel
       let allContent = [...Array(8).keys()];
       allContent.forEach(number => {
         if (document.getElementById(`jar-img-${number}`).src === "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==") {
