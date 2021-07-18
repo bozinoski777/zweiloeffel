@@ -1,12 +1,30 @@
-<%= link_to new_dose_path(ingredient: ingredient_within.id, amount: 10), method: :post, remote:  true  do %>
-  <div class="card-trip">
+<!-- <%#= link_to new_dose_path(ingredient: ingredient_within.id, amount: 10), method: :post, remote:  true  do %> -->
+  <div class="selectionCard" data-name="<%= ingredient_within.name %>" data-weight="<%= ingredient_within.weight %>" data-price="<%= ingredient_within.price %>" data-protein="<%= ingredient_within.protein %>">
     <img src=<%= ingredient_within.img %> />
-    <div class="card-trip-infos">
+    <div class="selectionCard-infos">
       <div>
         <h2><%= ingredient_within.name %></h2>
         <p>Protein: <%= ingredient_within.protein %> Gramm</p>
       </div>
-      <h2 class="card-trip-pricing"><%= ingredient_within.price %>€</h2>
+      <h2 class="selectionCard-pricing"><%= ingredient_within.price %></h2><h2>€</h2>
     </div>
   </div>
-<% end %>
+
+  <script>
+
+   // document.getElementById("<%#= ingredient_within.name %>").addEventListener("click", increaseOrder);
+    // function increaseOrder() {
+    //   let currentSelection = event.path[2].id;
+    //   console.log(event.path[2].id);
+    //   // Increase price
+    //   price += <%#= ingredient_within.price %>
+    //   document.getElementById("price").innerHTML = price;
+    //   // Increase weight
+    //   weight += <%#= ingredient_within.weight %>
+    //   document.getElementById("weight").innerHTML = weight;
+    //   // Increase protein
+    //   protein += <%#= ingredient_within.protein %>
+    //   document.getElementById("protein").innerHTML = protein;
+      // }
+  </script>
+<%# end %>

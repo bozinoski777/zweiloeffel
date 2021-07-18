@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
     skip_before_action :authenticate_user!, only: [:home, :delete_all_doses, :new_dose]
+
   def about
   end
 
@@ -31,6 +32,7 @@ class PagesController < ApplicationController
     @summary_price = summary_price
     @summary_weight = summary_weight
     @summary_protein = summary_protein
+    render 'pages/home'
   end
 
   def delete_all_doses

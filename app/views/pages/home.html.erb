@@ -5,10 +5,10 @@
     <div class="col-md-4">
       <div class="row">
         <div class="col-md-4">
-          <p>Preis: <%= @summary_price %>€</p>
+          <p>Preis:</p><p id="finalPrice"></p>
         </div>
         <div class="col-md-4">
-          <p>Gewicht: </p> <p id="price"><%= @summary_weight %></p><p>g</p>
+          <p>Gewicht:</p><p id="finalWeight"></p>
         </div>
         <div class="col-md-4">
           <p>Kaufen</p>
@@ -16,13 +16,16 @@
       </div>
     </div>
   </div>
+
   <div class="row">
     <div class="col-md-8">
-      <div class="row">
+      <div class="row" id="ingredientSelection">
           <% @ingredients.each do |ingredient| %>
             <div class="col-md-3 p-3" id= <%= ingredient.name %>>
                 <%= render 'shared/card_ingredient', ingredient_within: ingredient %>
             </div>
+
+
           <% end %>
 
       </div>
@@ -36,9 +39,10 @@
   <div class="row">
     <div class="col-md-2 text-center" >
       <%= render 'shared/pie-chart', summary_protein_within: @summary_protein, remote: true %>
-      <p><%= @summary_protein %> Gramm </p>
+      <p id="finalProtein"></p><p> Gramm </p>
     </div>
     <div class="col-md-2">
+      <p id="target"></p>
     </div>
     <div class="col-md-2">
     </div>
@@ -50,11 +54,6 @@
     </div>
   </div>
 </div>
-
-<script>
-  document.getElementById("myBtn").addEventListener("click", displayDate);
-</script>
-
 
 
 
