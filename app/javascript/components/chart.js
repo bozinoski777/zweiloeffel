@@ -48,7 +48,7 @@
   palette.addEventListener('click', event => {
     totalProtein = parseInt(document.getElementById("finalProtein").innerHTML);
     console.log(totalProtein)
-
+  // Update chart
   function addData(totalProtein){
     if (totalProtein < 100) {
       myChart.data.datasets[0].data[0] = (totalProtein);
@@ -59,7 +59,6 @@
       myChart.data.datasets[0].data[1] = 0;
       myChart.update();
     }
-
   }
   addData(totalProtein);
   })
