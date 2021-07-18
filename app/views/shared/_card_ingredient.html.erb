@@ -11,19 +11,20 @@
   </div>
 
   <script>
-    document.getElementById("<%= ingredient_within.name %>").addEventListener("click", increaseOrder);
-    function increaseOrder() {
-      let currentSelection = event.path[2].id;
-      console.log(event.path[2].id);
-      // Increase price
-      price += <%= ingredient_within.price %>
-      document.getElementById("price").innerHTML = price;
-      // Increase weight
-      weight += <%= ingredient_within.weight %>
-      document.getElementById("weight").innerHTML = weight;
-      // Increase protein
-      protein += <%= ingredient_within.protein %>
-      document.getElementById("protein").innerHTML = protein;
-      }
+
+   // document.getElementById("<%#= ingredient_within.name %>").addEventListener("click", increaseOrder);
+    // function increaseOrder() {
+    //   let currentSelection = event.path[2].id;
+    //   console.log(event.path[2].id);
+    //   // Increase price
+    //   price += <%#= ingredient_within.price %>
+    //   document.getElementById("price").innerHTML = price;
+    //   // Increase weight
+    //   weight += <%#= ingredient_within.weight %>
+    //   document.getElementById("weight").innerHTML = weight;
+    //   // Increase protein
+    //   protein += <%#= ingredient_within.protein %>
+    //   document.getElementById("protein").innerHTML = protein;
+      // }
   </script>
 <%# end %>

@@ -16,3 +16,8 @@ require("channels")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
+import { initialData } from '../components/homepage';
+
+document.addEventListener('turbolinks:load', () => {
+  initialData();
+});
