@@ -6,45 +6,23 @@ const initialData = () => {
 
   document.querySelectorAll('.selectionCard').forEach(item => {
     item.addEventListener('click', event => {
-      let ingredinetName = event.path[2].id;
-      let ingredientPrice = parseInt(event.path[2].children[0].children[1].children[1].innerHTML);
+      // Fetch ingredient data from DOM
+      let ingredinetName = event.path[1].dataset.name;
+      let ingredientPrice = parseInt(event.path[1].dataset.price);
+      let ingredientWeight = parseInt(event.path[1].dataset.weight);
+      let ingredientProtein = parseInt(event.path[1].dataset.protein);
+
       // Increase price
       price += ingredientPrice
-      document.getElementById("price").innerHTML = price;
+      document.getElementById("finalPrice").innerHTML = price;
+      // Increase weight
+      weight += ingredientWeight
+      document.getElementById("finalWeight").innerHTML = weight;
+      // Increase protein
+      protein += ingredientProtein
+      document.getElementById("finalProtein").innerHTML = protein;
 
     })
   })
-
-
-  // let selectionCards = document.getElementsByClassName("selectionCard");
-
-  // selectionCards.addEventListener("click", increaseOrder);
-  function increaseOrder() {
-    // console.log(event);
-
-    // let currentSelection = event.path[2].id;
-    // console.log(event.path[2].id);
-    // // Increase price
-    // price += <%= ingredient_within.price %>
-    // document.getElementById("price").innerHTML = price;
-    // // Increase weight
-    // weight += <%= ingredient_within.weight %>
-    // document.getElementById("weight").innerHTML = weight;
-    // // Increase protein
-    // protein += <%= ingredient_within.protein %>
-    // document.getElementById("protein").innerHTML = protein;
-    }
-
-
 }
-
 export { initialData };
-      // let currentSelection = event.path[2].id;
-      // console.log(event.path[2].id);
-
-      // // Increase weight
-      // weight += <%= ingredient_within.weight %>
-      // document.getElementById("weight").innerHTML = weight;
-      // // Increase protein
-      // protein += <%= ingredient_within.protein %>
-      // document.getElementById("protein").innerHTML = protein;

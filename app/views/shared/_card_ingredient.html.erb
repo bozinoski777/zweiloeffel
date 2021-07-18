@@ -1,5 +1,5 @@
 <!-- <%#= link_to new_dose_path(ingredient: ingredient_within.id, amount: 10), method: :post, remote:  true  do %> -->
-  <div class="selectionCard">
+  <div class="selectionCard" data-name="<%= ingredient_within.name %>" data-weight="<%= ingredient_within.weight %>" data-price="<%= ingredient_within.price %>" data-protein="<%= ingredient_within.protein %>">
     <img src=<%= ingredient_within.img %> />
     <div class="selectionCard-infos">
       <div>
