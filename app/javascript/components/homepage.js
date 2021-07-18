@@ -6,11 +6,11 @@ const initialData = () => {
 
   document.querySelectorAll('.selectionCard').forEach(item => {
     item.addEventListener('click', event => {
-      // console.log(event.path[2].id);
-      console.log(event.path[2].children[0].children[1].children[1].innerHTML);
-
-
-
+      let ingredinetName = event.path[2].id;
+      let ingredientPrice = parseInt(event.path[2].children[0].children[1].children[1].innerHTML);
+      // Increase price
+      price += ingredientPrice
+      document.getElementById("price").innerHTML = price;
 
     })
   })
@@ -41,9 +41,7 @@ const initialData = () => {
 export { initialData };
       // let currentSelection = event.path[2].id;
       // console.log(event.path[2].id);
-      // // Increase price
-      // price += selectionCard-pricing
-      // document.getElementById("price").innerHTML = price;
+
       // // Increase weight
       // weight += <%= ingredient_within.weight %>
       // document.getElementById("weight").innerHTML = weight;
