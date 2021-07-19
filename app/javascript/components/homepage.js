@@ -28,29 +28,24 @@ let initialData = () => {
       }
       let counter = 0
 
-      selection.forEach(item => {
-        let selectedIngredientIMG = event.path[1].dataset.img;
-        let selectedIngredientWeight = parseInt(event.path[1].dataset.weight);
+      // selection.forEach(item => {
+      //   let selectedIngredientIMG = event.path[1].dataset.img;
+      //   let selectedIngredientWeight = parseInt(event.path[1].dataset.weight);
+      //   let contentImg = document.getElementById(`jar-img-${counter}`);
+      //   contentImg.src = selectedIngredientIMG
+      //   contentImg.style.height = "20%"
+      //   counter += 1
+      // })
 
+ // OR
 
-        let contentImg = document.getElementById(`jar-img-${counter}`);
-        contentImg.src = selectedIngredientIMG
-        contentImg.style.height = `${selectedIngredientWeight}%`
-        counter += 1
-
-      })
-
-      //Jar  This is where I left off. I dont know how to iterate over the coices to differentiate between alreadz selected or novel
-
-
-      // let contentImg = document.getElementById("jar-img-1");
-      // contentImg.src = ingredientIMG
-      // contentImg.style.height = `${weight}%`
+    //  iterate over all divs ad populate them from top to bottom
       let allDivs = [...Array(8).keys()];
       allDivs.forEach(number => {
         if (selection[number]) {
-          document.getElementById(`jar-img-${number}`).src = (selection[number]).dataset.img;
-          // console.log(selection[number].dataset.img)
+          let selectedDiv = document.getElementById(`jar-img-${number}`);
+          selectedDiv.src = (selection[number]).dataset.img;
+          selectedDiv.style.height = "20%";
         }
 
       });
