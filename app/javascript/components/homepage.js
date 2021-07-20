@@ -38,7 +38,6 @@ let initialData = () => {
       // })
 
  // OR
-
     //  iterate over all divs ad populate them from top to bottom
       let allDivs = [...Array(8).keys()];
       allDivs.forEach(number => {

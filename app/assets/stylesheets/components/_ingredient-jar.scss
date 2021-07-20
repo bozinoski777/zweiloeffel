@@ -1,7 +1,39 @@
 .ingredient-jar {
-  width: 100%;
-  position:absolute;
-  bottom:0;
-  height: 0%;
   object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
+
+.jar-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  // grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "jar-content-div-7"
+    "jar-content-div-6"
+    "jar-content-div-5"
+    "jar-content-div-4"
+    "jar-content-div-3"
+    "jar-content-div-2"
+    "jar-content-div-1"
+    "jar-content-div-0";
+}
+
+
+.jar-content-div-7 { grid-area: jar-content-div-7; }
+
+.jar-content-div-6 { grid-area: jar-content-div-6; }
+
+.jar-content-div-5 { grid-area: jar-content-div-5; }
+
+.jar-content-div-4 { grid-area: jar-content-div-4; }
+
+.jar-content-div-3 { grid-area: jar-content-div-3; }
+
+.jar-content-div-2 { grid-area: jar-content-div-2; }
+
+.jar-content-div-1 { grid-area: jar-content-div-1; }
+
+.jar-content-div-8 { grid-area: jar-content-div-0; }
