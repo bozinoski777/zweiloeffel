@@ -38,13 +38,17 @@ let initialData = () => {
       // })
 
  // OR
-    //  iterate over all divs ad populate them from top to bottom
+    //  display none all divs that are empty, when the increase of height happens should be only top the selected item not all
       let allDivs = [...Array(8).keys()];
       allDivs.forEach(number => {
         if (selection[number]) {
-          let selectedDiv = document.getElementById(`jar-img-${number}`);
-          selectedDiv.src = (selection[number]).dataset.img;
-          selectedDiv.style.height = "20%";
+         let selectedImg = document.getElementById(`jar-img-${number}`);
+          selectedImg.src = (selection[number]).dataset.img;
+          let currentHeight = parseInt(selectedImg.style.height.replace("px", ""));
+          currentHeight += 50;
+          currentHeight += "px";
+          selectedImg.style.height = currentHeight;
+        } else {
         }
 
       });
