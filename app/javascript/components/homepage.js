@@ -26,7 +26,7 @@ let initialData = () => {
       if(!selection.includes(item)) {
         selection.push(item);
       }
-      let counter = 0
+      // let counter = 0
 
       // selection.forEach(item => {
       //   let selectedIngredientIMG = event.path[1].dataset.img;
@@ -45,6 +45,7 @@ let initialData = () => {
          let selectedImg = document.getElementById(`jar-img-${number}`);
           selectedImg.src = (selection[number]).dataset.img;
           let currentHeight = parseInt(selectedImg.style.height.replace("px", ""));
+          console.log(currentHeight)
           currentHeight += 50;
           currentHeight += "px";
           selectedImg.style.height = currentHeight;
