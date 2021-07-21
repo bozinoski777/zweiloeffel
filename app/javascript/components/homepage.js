@@ -34,29 +34,27 @@ let initialData = () => {
         let contentImg = document.getElementById(`jar-img-${counter}`);
 
         counter += 1
-          let currentHeight = parseInt(contentImg.style.height.replace("px", ""));
-          currentHeight += 50;
-          currentHeight += "px";
-          contentImg.style.height = currentHeight;
+          // let currentHeight = parseInt(contentImg.style.height.replace("px", ""));
       })
 
  // OR
     //  display none all divs that are empty, when the increase of height happens should be only top the selected item not all
-          console.log(ingredinetName)
-          console.log()
       let allDivs = [...Array(8).keys()];
       allDivs.forEach(number => {
         if (selection[number]) {
          let selectedImg = document.getElementById(`jar-img-${number}`);
           selectedImg.src = (selection[number]).dataset.img;
-          selectedImg.dataset.name = ingredinetName
+          selectedImg.dataset.jarname = ingredinetName
 
 
         }
 
       });
-
-
+      let selectedJarIngredient = document.querySelector(`[data-jarname = ${ingredinetName}]`)
+      let currentHeight = parseInt(selectedJarIngredient.style.height.replace("px", ""))
+      currentHeight += 50;
+      currentHeight += "px";
+      selectedJarIngredient.style.height = currentHeight;
     })
   })
 
