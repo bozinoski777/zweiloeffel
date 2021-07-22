@@ -2,14 +2,16 @@
   object-fit: cover;
   height: 100%;
   width: 100%;
+  transform: rotate(180deg);
 }
 
 .jar-container {
-  display: grid;
+  display: table-cell;
   grid-template-columns: 1fr;
   // grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
+  align-items: flex-end;
   grid-template-areas:
     "jar-content-div-7"
     "jar-content-div-6"

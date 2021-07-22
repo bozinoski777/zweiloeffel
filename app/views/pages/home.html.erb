@@ -30,11 +30,10 @@
 
       </div>
     </div>
-    <div class="col-md-4 p-3">
+    <div style="transform: rotate(180deg);" class="col-md-4 p-3">
       <%= render 'shared/jar' %>
-      <%= button_to "delete", delete_all_doses_path, method: "delete", remote:  true %>
-
     </div>
+      <%= button_to "delete", delete_all_doses_path, method: "delete", remote:  true %>
   </div>
   <div class="row">
     <div class="col-md-2 text-center" >
