@@ -30,11 +30,15 @@ let initialData = () => {
       //  display none all divs that are empty, when the increase of height happens should be only top the selected item not all
       let allDivs = [...Array(8).keys()];
       allDivs.forEach(number => {
+        let currentJarImg = document.getElementById(`jar-img-${number}`);
         if (selection[number]) {
+          currentJarImg.style.display = "block"
           // change info in jar according to palette selection
-          let currentJarImg = document.getElementById(`jar-img-${number}`);
           currentJarImg.src = (selection[number]).dataset.img;
           currentJarImg.dataset.jarname = (selection[number]).dataset.name;
+
+        }else{
+          currentJarImg.style.display = "none"
         }
       });
 
