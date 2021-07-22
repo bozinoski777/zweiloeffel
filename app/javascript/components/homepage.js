@@ -26,31 +26,21 @@ let initialData = () => {
       if(!selection.includes(item)) {
         selection.push(item);
       }
-      let counter = 0
 
-      selection.forEach(item => {
-        let selectedIngredientIMG = event.path[1].dataset.img;
-        let selectedIngredientWeight = parseInt(event.path[1].dataset.weight);
-        let contentImg = document.getElementById(`jar-img-${counter}`);
-
-        counter += 1
-          // let currentHeight = parseInt(contentImg.style.height.replace("px", ""));
-      })
-
- // OR
-    //  display none all divs that are empty, when the increase of height happens should be only top the selected item not all
+      //  display none all divs that are empty, when the increase of height happens should be only top the selected item not all
       let allDivs = [...Array(8).keys()];
       allDivs.forEach(number => {
         if (selection[number]) {
-         let selectedImg = document.getElementById(`jar-img-${number}`);
-          selectedImg.src = (selection[number]).dataset.img;
-          selectedImg.dataset.jarname = ingredinetName
-
-
+          // change info in jar according to palette selection
+          let currentJarImg = document.getElementById(`jar-img-${number}`);
+          currentJarImg.src = (selection[number]).dataset.img;
+          currentJarImg.dataset.jarname = (selection[number]).dataset.name;
         }
-
       });
-      let selectedJarIngredient = document.querySelector(`[data-jarname = ${ingredinetName}]`)
+
+      // change style in currently selected image
+      let divDataChange = `[data-jarname = ${ingredinetName}]`
+      let selectedJarIngredient = document.querySelector(divDataChange)
       let currentHeight = parseInt(selectedJarIngredient.style.height.replace("px", ""))
       currentHeight += 50;
       currentHeight += "px";
