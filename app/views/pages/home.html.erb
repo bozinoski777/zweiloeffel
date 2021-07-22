@@ -3,15 +3,21 @@
     <div class="col-md-8">
     </div>
     <div class="col-md-4">
-      <div class="row">
+      <div class="row pl-3 mt-3">
         <div class="col-md-4">
-          <p>Preis:</p><p id="finalPrice">0</p>
+          <div class="row">
+            <h4>Preis: &nbsp;</h4><h4 id="finalPrice">0</h4><h4> &nbsp;€</h4>
+          </div>
         </div>
         <div class="col-md-4">
-          <p>Gewicht:</p><p id="finalWeight">0</p>
+          <div class="row">
+            <h4>Gewicht: &nbsp;</h4><h4 id="finalWeight">0</h4><h4> &nbsp;g</h4>
+          </div>
         </div>
         <div class="col-md-4">
-          <p>Kaufen</p>
+          <div class="pl-2">
+            <%= button_to "Kaufen", delete_all_doses_path, method: "delete", remote:true, class: "btn btn-success btn-lg", style: "float:right;"%>
+          </div>
         </div>
       </div>
     </div>
