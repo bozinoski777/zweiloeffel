@@ -1,4 +1,8 @@
 class ClickAndHold {
+  /**
+    * @param {EventTarget} target
+    * @param {Function} callback
+  */
   constructor(target, callback) {
     this.target = target;
     this.callback = callback;
@@ -6,32 +10,36 @@ class ClickAndHold {
     this.activeHoldTimeoutId = null;
 
     ["mousedown", "touchstart"].forEach(type => {
-      this.target.addEventListener(type, this._onHoldStart.bind(this));
+      this.target.addEventListener(type, this.onHoldStart.bind(this));
     });
 
     ["mouseup", "mouseleave", "mouseout", "touchend", "touchcancel"].forEach(type => {
-      this.target.addEventListener(type, this._onHoldEnd.bind(this));
+      this.target.addEventListener(type, this.onHoldEnd.bind(this));
     });
   }
 
-  _onHoldStart() {
+  onHoldStart() {
     this.isHeld = true;
 
     this.activeHoldTimeoutId = setTimeout(() => {
       if (this.isHeld) {
         this.callback();
       }
-    }, 1000);
+    }, 0);
   }
 
-  _onHoldEnd() {
+  onHoldEnd() {
     this.isHeld = false;
     clearTimeout(this.activeHoldTimeoutId);
   }
 }
 
-const myButton = document.getElementsByClassName("selectionCard");
+const myButton = document.getElementById("myButton");
 
 new ClickAndHold(myButton, () => {
-  alert("DADDYYYYYYY");
+  let zaddy = 0;
+  while (zaddy >= 100) {
+    console.log(zaddy);
+    zaddy++;
+  }
 })
