@@ -18,7 +18,7 @@ require("channels")
 
 import { initialData } from '../components/homepage';
 import { proteinChart } from '../components/chart';
-import {  } from '../components/jar';
+import {  } from '../components/ClickAndHold';
 document.addEventListener('turbolinks:load', () => {
   initialData();
   proteinChart();
