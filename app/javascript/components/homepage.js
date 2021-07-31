@@ -48,12 +48,47 @@ let initialData = () => {
       // change style in currently selected image
       let divDataChange = `[data-jarname = ${ingredinetName}]`
       let selectedJarIngredient = document.querySelector(divDataChange)
+      // let currentHeight = parseInt(selectedJarIngredient.style.height.replace("px", ""))
+      // currentHeight += 50;
+      // currentHeight += "px";
+      // selectedJarIngredient.style.height = currentHeight;
+
+/////////////////////////////////////////////////////
+      //lets fuck it up, right?
+
+      var mousedownID = -1;  //Global ID of mouse down interval
+      let coun = 0;
+      function mousedown(event) {
+        if(mousedownID==-1)  //Prevent multimple loops!
+           mousedownID = setInterval(whilemousedown, 100 /*execute every 100ms*/);
+
+
+      }
+      function mouseup(event) {
+         if(mousedownID!=-1) {  //Only stop if exists
+           clearInterval(mousedownID);
+           mousedownID=-1;
+         }
+
+      }
+      function whilemousedown() {
+         coun += 1;
       let currentHeight = parseInt(selectedJarIngredient.style.height.replace("px", ""))
-      currentHeight += 50;
+      currentHeight += 10;
       currentHeight += "px";
       selectedJarIngredient.style.height = currentHeight;
+      }
+      //Assign events
+      console.log(item.addEventListener("mousedown", mousedown))
 
-      console.log(totalJarSize)
+      item.addEventListener("mouseup", mouseup);
+      //Also clear the interval when user leaves the window with mouse
+      item.addEventListener("mouseout", mouseup);
+///////////////////////////////////////////////////////////////////
+
+
+
+
       }else{
 
       }

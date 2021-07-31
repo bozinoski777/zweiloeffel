@@ -1,45 +1,25 @@
-class ClickAndHold {
-  /**
-    * @param {EventTarget} target
-    * @param {Function} callback
-  */
-  constructor(target, callback) {
-    this.target = target;
-    this.callback = callback;
-    this.isHeld = false;
-    this.activeHoldTimeoutId = null;
+// var mousedownID = -1;  //Global ID of mouse down interval
+// let coun = 0;
+// function mousedown(event) {
+//   if(mousedownID==-1)  //Prevent multimple loops!
+//      mousedownID = setInterval(whilemousedown, 100 /*execute every 100ms*/);
 
-    ["mousedown", "touchstart"].forEach(type => {
-      this.target.addEventListener(type, this.onHoldStart.bind(this));
-    });
 
-    ["mouseup", "mouseleave", "mouseout", "touchend", "touchcancel"].forEach(type => {
-      this.target.addEventListener(type, this.onHoldEnd.bind(this));
-    });
-  }
+// }
+// function mouseup(event) {
+//    if(mousedownID!=-1) {  //Only stop if exists
+//      clearInterval(mousedownID);
+//      mousedownID=-1;
+//    }
 
-  onHoldStart() {
-    this.isHeld = true;
-
-    this.activeHoldTimeoutId = setTimeout(() => {
-      if (this.isHeld) {
-        this.callback();
-      }
-    }, 0);
-  }
-
-  onHoldEnd() {
-    this.isHeld = false;
-    clearTimeout(this.activeHoldTimeoutId);
-  }
-}
-
-const myButton = document.getElementById("myButton");
-
-new ClickAndHold(myButton, () => {
-  let zaddy = 0;
-  while (zaddy >= 100) {
-    console.log(zaddy);
-    zaddy++;
-  }
-})
+// }
+// function whilemousedown() {
+//    /*here put your code*/
+//    coun += 1;
+//    console.log(coun);
+// }
+// //Assign events
+// document.addEventListener("mousedown", mousedown);
+// document.addEventListener("mouseup", mouseup);
+// //Also clear the interval when user leaves the window with mouse
+// document.addEventListener("mouseout", mouseup);
